@@ -2,21 +2,14 @@
 
 A pixel-aligned recreation of the Markr Webflow marketing landing page, built with Next.js (Pages Router) and raw CSS.
 
-## Setup
+## To run the project:
 
 ```bash
 npm install
 npm run dev
 ```
 
-Then open http://localhost:3000.
-
-To create a production build:
-
-```bash
-npm run build
-npm start
-```
+Then browse at http://localhost:3000.
 
 ## Approach
 
@@ -53,4 +46,4 @@ styles/
 
 ## AI tooling disclosure
 
-This project was built with **Claude** (Anthropic), used as an AI coding assistant directly in this conversation to: scaffold the Next.js Pages Router project, write all components and CSS from the screenshot/reference analysis, and verify the project builds and runs (`npm run build`, `npm run dev`) before delivery. No other AI coding tools were used.
+This project was built with **Claude** (Anthropic), used as an AI coding assistant to: scaffold the Next.js Pages Router project, write all components and CSS from the screenshot/reference analysis, and verify the project builds and runs (`npm run build`, `npm run dev`) before delivery. No other AI coding tools were used.
