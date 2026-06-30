@@ -1,0 +1,139 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  width: 100%;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #10182b;
+}
+
+.logoMark {
+  display: inline-flex;
+  color: #10182b;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1c2333;
+}
+
+.mobileActions {
+  display: none;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.loginBtn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 2px solid var(--color-blue);
+  color: var(--color-blue);
+  font-weight: 600;
+  font-size: 14px;
+  background: var(--color-white);
+}
+
+.signupBtn {
+  padding: 11px 22px;
+  border-radius: 8px;
+  background: var(--color-blue);
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.signupMobile {
+  padding: 11px 22px;
+  border-radius: 8px;
+  background: var(--color-blue);
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+}
+
+.burger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #10182b;
+  border-radius: 2px;
+}
+
+@media (max-width: 880px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 75%;
+    max-width: 320px;
+    background: var(--color-white);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+    padding: 90px 28px 28px;
+    transition: right 0.25s ease;
+    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .navOpen {
+    right: 0;
+  }
+
+  .mobileActions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .mobileActions a {
+    width: 100%;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
