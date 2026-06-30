@@ -115,6 +115,12 @@
   background: var(--color-blue-dark);
 }
 
+@media (max-width: 880px) {
+  .submit {
+    width: 100%;
+  }
+}
+
 @media (max-width: 640px) {
   .grid {
     grid-template-columns: 1fr;

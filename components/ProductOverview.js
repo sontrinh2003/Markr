@@ -1,6 +1,7 @@
 import styles from "../styles/ProductOverview.module.css";
 
 const checklist = [
+  "AI-powered automatic marking saves 95% of assessment time",
   "Create assessments in minutes with our intuitive builder",
   "Real-time insights into student performance and learning gaps",
   "Seamless integration with your existing curriculum",

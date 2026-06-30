@@ -1,10 +1,12 @@
 .header {
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
   z-index: 50;
   width: 100%;
+  background: var(--color-white);
+  box-shadow: 0 1px 0 rgba(16, 24, 43, 0.08);
 }
 
 .inner {
@@ -96,6 +98,14 @@
   border-radius: 2px;
 }
 
+.backdrop {
+  display: none;
+}
+
+.closeBtn {
+  display: none;
+}
+
 @media (max-width: 880px) {
   .nav {
     position: fixed;
@@ -111,10 +121,33 @@
     padding: 90px 28px 28px;
     transition: right 0.25s ease;
     box-shadow: -8px 0 24px rgba(0, 0, 0, 0.08);
+    z-index: 60;
   }
 
   .navOpen {
     right: 0;
+  }
+
+  .backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(16, 24, 43, 0.35);
+    z-index: 55;
+  }
+
+  .closeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--color-bg-light);
+    border: none;
   }
 
   .mobileActions {

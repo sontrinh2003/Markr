@@ -6,6 +6,13 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
+      {menuOpen && (
+        <div
+          className={styles.backdrop}
+          onClick={() => setMenuOpen(false)}
+          aria-hidden="true"
+        />
+      )}
       <div className={`container ${styles.inner}`}>
         <a href="#" className={styles.logo}>
           <span className={styles.logoMark} aria-hidden="true">
@@ -24,9 +31,29 @@ export default function Header() {
         </a>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ""}`}>
-          <a href="#product">Products</a>
-          <a href="#resources">Resources</a>
-          <a href="#about">About</a>
+          <button
+            className={styles.closeBtn}
+            aria-label="Close menu"
+            onClick={() => setMenuOpen(false)}
+          >
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+              <path
+                d="M6 6l12 12M18 6 6 18"
+                stroke="#10182b"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          </button>
+          <a href="#product" onClick={() => setMenuOpen(false)}>
+            Products
+          </a>
+          <a href="#resources" onClick={() => setMenuOpen(false)}>
+            Resources
+          </a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>
+            About
+          </a>
           <div className={styles.mobileActions}>
             <a href="#login" className="btn btn-outline-nav">
               Log in

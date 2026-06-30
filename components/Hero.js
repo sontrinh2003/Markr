@@ -41,6 +41,9 @@ const stats = [
 export default function Hero() {
   return (
     <section className={styles.hero}>
+      <div className={styles.blobOne} aria-hidden="true" />
+      <div className={styles.blobTwo} aria-hidden="true" />
+      <div className={styles.grid} aria-hidden="true" />
       <div className={`container ${styles.inner}`}>
         <div className={styles.copy}>
           <h1>
@@ -66,12 +69,15 @@ export default function Hero() {
         </div>
 
         <div className={styles.stats}>
-          {stats.map((s) => (
-            <div className={styles.statRow} key={s.label}>
-              <span className={styles.statIcon}>{s.icon}</span>
-              <div>
-                <div className={styles.statValue}>{s.value}</div>
-                <div className={styles.statLabel}>{s.label}</div>
+          {stats.map((s, i) => (
+            <div key={s.label}>
+              {i > 0 && <div className={styles.divider} aria-hidden="true" />}
+              <div className={styles.statRow}>
+                <span className={styles.statIcon}>{s.icon}</span>
+                <div>
+                  <div className={styles.statValue}>{s.value}</div>
+                  <div className={styles.statLabel}>{s.label}</div>
+                </div>
               </div>
             </div>
           ))}

@@ -41,7 +41,7 @@ function Chevron({ open }) {
 }
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState(-1);
 
   const toggle = (i) => {
     setOpenIndex((current) => (current === i ? -1 : i));
